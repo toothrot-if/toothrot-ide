@@ -1,0 +1,804 @@
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+* {
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+.abs {
+    position: absolute;
+}
+
+.fix {
+    position: fixed;
+}
+
+.l0 {
+    left: 0;
+}
+
+.t0 {
+    top: 0;
+}
+
+.r0 {
+    right: 0;
+}
+
+.b0 {
+    bottom: 0;
+}
+
+.di {
+    display: inline;
+}
+
+.db {
+    display: block;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.p-s {
+    padding: 4px;
+}
+
+.p-m {
+    padding: 8px;
+}
+
+.p-l {
+    padding: 16px;
+}
+
+.p-xl {
+    padding: 20px;
+}
+
+.pl-xs {
+    padding-left: 2px;
+}
+
+.pl-s {
+    padding-left: 4px;
+}
+
+.pl-m {
+    padding-left: 8px;
+}
+
+.pl-l {
+    padding-left: 16px;
+}
+
+.pl-xl {
+    padding-left: 20px;
+}
+
+.pt-xs {
+    padding-top: 2px;
+}
+
+.pt-s {
+    padding-top: 4px;
+}
+
+.pt-m {
+    padding-top: 8px;
+}
+
+.pt-l {
+    padding-top: 16px;
+}
+
+.pt-xl {
+    padding-top: 20px;
+}
+
+.pv-s {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.m-xs {
+    margin: 2px;
+}
+
+.m-s {
+    margin: 4px;
+}
+
+.m-m {
+    margin: 8px;
+}
+
+.m-l {
+    margin: 16px;
+}
+
+.m-xl {
+    margin: 20px;
+}
+
+.mt-xs {
+    margin-top: 2px;
+}
+
+.mt-s {
+    margin-top: 4px;
+}
+
+.mt-m {
+    margin-top: 8px;
+}
+
+.mt-l {
+    margin-top: 16px;
+}
+
+.mt-xl {
+    margin-top: 20px;
+}
+
+.mb-xs {
+    margin-bottom: 2px;
+}
+
+.mb-s {
+    margin-bottom: 4px;
+}
+
+.mb-m {
+    margin-bottom: 8px;
+}
+
+.mb-l {
+    margin-bottom: 16px;
+}
+
+.mb-xl {
+    margin-bottom: 20px;
+}
+
+.ml-xs {
+    margin-left: 2px;
+}
+
+.ml-s {
+    margin-left: 4px;
+}
+
+.ml-m {
+    margin-left: 8px;
+}
+
+.ml-l {
+    margin-left: 16px;
+}
+
+.ml-xl {
+    margin-left: 20px;
+}
+
+.mr-xs {
+    margin-right: 2px;
+}
+
+.mr-s {
+    margin-right: 4px;
+}
+
+.mr-m {
+    margin-right: 8px;
+}
+
+.mr-l {
+    margin-right: 16px;
+}
+
+.mr-xl {
+    margin-right: 20px;
+}
+
+.mv-xl {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mh-m {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.ml20 {
+    margin-left: 20%;
+}
+
+.ml30 {
+    margin-left: 30%;
+}
+
+.w10 {
+    width: 10%;
+}
+
+.w20 {
+    width: 20%;
+}
+
+.w30 {
+    width: 30%;
+}
+
+.w40 {
+    width: 40%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w60 {
+    width: 60%;
+}
+
+.w70 {
+    width: 70%;
+}
+
+.w80 {
+    width: 80%;
+}
+
+.w90 {
+    width: 90%;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.hm-50p {
+    min-height: 50px;
+}
+
+.ofh {
+    overflow: hidden;
+}
+
+.ofa {
+    overflow: auto;
+}
+
+.ofs {
+    overflow: scroll;
+}
+
+.ff-mono {
+    font-family: monospace;
+}
+
+.lh0 {
+    line-height: 0;
+}
+
+.lh-l {
+    line-height: 20px;
+}
+
+.fs-xxs {
+    font-size: 10px;
+}
+
+.fs-xs {
+    font-size: 12px;
+}
+
+.fs-s {
+    font-size: 14px;
+}
+
+.fs-m {
+    font-size: 16px;
+}
+
+.fs-l {
+    font-size: 20px;
+}
+
+.fs-xl {
+    font-size: 24px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.tal {
+    text-align: left;
+}
+
+.taj {
+    text-align: justify;
+}
+
+.tac {
+    text-align: center;
+}
+
+.tar {
+    text-align: right;
+}
+
+.green {
+    color: rgb(100, 250, 100);
+}
+
+.red {
+    color: rgb(250, 100, 100);
+}
+
+.grey {
+    color: rgb(200, 200, 200);
+}
+
+.bg-light {
+    background: rgb(50, 50, 50);
+}
+
+.bg-dark {
+    background: rgb(10, 10, 10);
+}
+
+.bg-flat {
+    background: rgb(25, 25, 25);
+}
+
+.bgg-dark {
+    background: #424242;
+    background-image: -webkit-linear-gradient(top, #424242, #1f1f1f);
+    background-image: -moz-linear-gradient(top, #424242, #1f1f1f);
+    background-image: -ms-linear-gradient(top, #424242, #1f1f1f);
+    background-image: -o-linear-gradient(top, #424242, #1f1f1f);
+    background-image: linear-gradient(to bottom, #424242, #1f1f1f);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.oval-s {
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.oval {
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* border style for interactive elements like buttons: */
+.iact {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.link {
+    color: rgb(100, 100, 200);
+}
+
+[data-exists=false] .link {
+    color: rgb(200, 100, 100);
+}
+
+[data-hidden=true] {
+    display: none;
+}
+
+.html5tooltip-box, .html5tooltip-box::before {
+    box-shadow: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: rgb(50, 50, 50);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+input, textarea {
+    background: rgb(20, 20, 20);
+    color: white;
+    border-radius: 5px;
+}
+
+input[type=text], input[type=password], .sunken {
+    border: 2px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(80, 80, 80);
+    border-right: 1px solid rgb(80, 80, 80);
+}
+
+.sectionList {
+    min-width: 200px;
+}
+
+.overlay {
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog {
+    background: rgb(50, 50, 50);
+    margin: auto;
+    margin-top: 50px;
+    max-width: 600px;
+    border-radius: 3px;
+    border: 1px solid black;
+    border-top: 1px solid rgb(80, 80, 80);
+    border-left: 1px solid rgb(80, 80, 80);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dialog .info {
+    font-size: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+
+.dialog .info.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dialog .button {
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.4);
+    margin-left: 5px;
+}
+
+.dialog .buttons .button {
+    padding: 10px;
+}
+
+.dialog .button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.new-file-dialog .row {
+    position: relative;
+    height: 40px;
+}
+
+.new-file-dialog .content {
+    font-size: 0;
+}
+
+.new-file-dialog .select-box {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 4px;
+}
+
+.new-file-dialog .input {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-right: 5px;
+    font-size: 16px;
+}
+
+#header {
+    padding: 3px;
+    background: rgb(0, 0, 0);
+    color: white;
+}
+
+#header .Menu {
+    float: right;
+    padding-right: 3px;
+}
+
+.content-area {
+    top: 54px;
+    padding: 10px;
+    overflow: auto;
+}
+
+#content {
+    max-width: 960px;
+    margin: auto;
+}
+
+#content h1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: rgb(25, 25, 25);
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(220, 220, 220);
+    padding: 5px;
+    padding-left: 8px;
+}
+
+.error {
+    background: rgb(180, 50, 50);
+    color: white;
+}
+
+.button {
+    color: rgb(220, 220, 220);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+.button:hover {
+    background: rgba(50, 50, 50, 0.5);
+    text-decoration: none;
+}
+
+.button.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.project {
+    max-width: 700px;
+    padding: 0;
+    margin: auto;
+    margin-top: 10px;
+    background: rgb(30, 30, 30);
+    overflow: hidden;
+    text-align: center;
+    border-radius: 3px;
+    transition-duration: 0.5s;
+}
+
+.project:first-child {
+    margin-top: 30px;
+}
+
+.project:hover {
+    background: rgb(15, 15, 15);
+}
+
+.project .info {
+    float: left;
+}
+
+.project .button-bar {
+    float: right;
+    padding: 5px;
+}
+
+.project .name {
+    padding: 10px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.realmName {
+    text-transform: uppercase;
+}
+
+.nodeText {
+    min-height: 300px;
+}
+
+.editor-frame {
+    top: 130px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.editor-content {
+    width: 100%;
+    height: 100%;
+    max-width: 960px;
+    margin: auto;
+}
+
+.lines-content {
+    padding-left: 5px;
+}
+
+.margin-view-overlays {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.file-controls {
+    margin-top: 25px;
+}
+
+.file-controls select {
+    height: 30px;
+    min-width: 300px;
+}
+
+.file-buttons {
+    float: right;
+}
+
+.file-buttons .button {
+    font-size: 0.7em;
+}
+
+.file-buttons .button[data-state=disabled] {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.select-box {
+    display: inline-block;
+    position: relative;
+}
+
+.select-box-icon {
+    pointer-events: none;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.select-box select {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: transparent;
+    background-image: none;
+    border: 0;
+    color: white;
+    font-size: 0.8em;
+    box-shadow: none;
+    -webkit-appearance: none;
+    padding: 5px 8px;
+}
+
+.select-box select:focus, input[type=text]:focus {
+    outline: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.select-box optgroup, .select-box option {
+    background: rgb(20, 20, 20);
+}
+
+.line-error:after {
+    content: " ! ";
+    position: absolute;
+    right: 0;
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 100%;
+    background: rgb(120, 20, 20);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.error-guide {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 960px;
+    background: rgba(50, 0, 0, 0.9);
+    color: white;
+    border: 1px solid rgba(255, 0, 0, 0.6);
+    box-shadow: 0 0 20px black;
+    transform: translate(-50%, 120%);
+    transition-duration: 0.2s;
+}
+
+.error-guide.enabled {
+    transform: translate(-50%, 0);
+}
+
+.error-guide-header {
+    position: relative;
+    background: rgb(120, 20, 20);
+    padding: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.error-guide-header .error-icon {
+    margin-right: 5px;
+}
+
+.error-navigation {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+}
+
+.error-navigation .button {
+    display: inline-block;
+    min-width: 30px;
+    height: 25px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.error-navigation *[data-state=disabled] {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.error-details {
+    min-height: 100px;
+    padding: 10px;
+}
+
+.error-details .error-id {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.error-message .location-link {
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(50, 150, 255);
+}

@@ -1,0 +1,49 @@
+{
+  "name": "toothrot-editor",
+  "productName": "Toothrot",
+  "version": "2.0.0-beta",
+  "description": "A build tool and editor for creating text-based games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update-nsi-file": "vrep scripts/installers/windows/installer-template.nsi package.json scripts/installers/windows/installer.nsi",
+    "build-mac": "electron-packager . toothrot-editor --overwrite --platform=darwin --arch=x64 --icon=style/icons/icon.icns --prune=true --out=release-builds",
+    "build-win": "electron-packager . toothrot-editor --overwrite --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Toothrot\"",
+    "build-linux": "electron-packager . toothrot-editor --overwrite --platform=linux --arch=x64 --icon=style/icons/icon512.png --prune=true --out=release-builds",
+    "package-debian": "electron-installer-debian --src release-builds/toothrot-editor-linux-x64/ --dest release-builds/installers/ --arch amd64 --config config/debian.json",
+    "prepare-package-mac": "npm install appdmg && mkdir release-builds/installers",
+    "clean-dmg": "rm release-builds/installers/Toothrot-Editor.dmg",
+    "package-mac": "appdmg config/mac.json release-builds/installers/Toothrot-Editor.dmg"
+  },
+  "author": "J. Steinbeck <mail@steinbeck.it>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "domfx": "^0.2.0",
+    "domglue": "1.0.x",
+    "electron-log": "^2.2.13",
+    "electron-packager": "^8.4.0",
+    "electron-patch-fs": "^1.0.3",
+    "enjoy-core": "^1.2.0",
+    "homedir": "^0.6.0",
+    "monaco-editor": "^0.10.1",
+    "monaco-loader": "^0.8.2",
+    "rimraf": "^2.5.4",
+    "t3js": "^2.7.0",
+    "toothrot": "^2.0.0-beta.9",
+    "transform-js": "^1.1.0-final.1512141547",
+    "vrep": "^2.0.0"
+  },
+  "electronVersion": "1.4.12",
+  "electron": {
+    "version": "1.4.12",
+    "platform": [
+      "darwin",
+      "linux",
+      "win32"
+    ]
+  },
+  "devDependencies": {
+    "electron": "1.4.15",
+    "electron-installer-debian": "^0.7.1"
+  }
+}

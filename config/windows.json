@@ -1,0 +1,14 @@
+{
+    "icon": "style/icons/icon.ico",
+    "tags": [
+        "Editor",
+        "IDE",
+        "Game Development",
+        "Interactive Fiction"
+    ],
+    "name": "toothrot-editor",
+    "productName": "Toothrot Editor",
+    "description": "Editor and build tool for creating test-based games",
+    "productDescription": "An editor that allows you to create your own text-based games (interactive fiction).",
+    "homepage": "https://toothrot.iiyo.org"
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Toothrot Engine</title>
+        <link rel="stylesheet" type="text/css" href="style/icons/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="style/default.css" />
+    </head>
+    <body>
+        <div id="main fix l0 t0 r0 b0">
+            <div id="header" data-module="header">
+                <div class="Menu mt-s" data-realm="projects">
+                    <a class="button p-m dib oval-s iact"
+                       data-type="addProjectButton"
+                       title="New project">
+                        <span class="fa fa-plus-circle fa-lg"></span>
+                    </a>
+                </div>
+                <div class="Menu mt-s" data-realm="editor">
+                    <a class="button p-m dib oval-s iact"
+                        data-type="goToProjects"
+                        title="Go to projects overview">
+                        <span class="fa fa-home fa-lg"></span>
+                    </a>
+                    <a class="button dib p-m oval-s iact"
+                       data-type="openFolderButton"
+                       data-project-id="{id}"
+                       data-project-name="{name}"
+                       data-key="button"
+                       title="Open project folder">
+                        <span class="fa fa-folder fa-lg"></span>
+                    </a>
+                    <a class="button dib p-m oval-s iact"
+                       data-type="buildDesktopButton"
+                       data-project-id="{id}"
+                       data-project-name="{name}"
+                       data-key="button"
+                       title="Build for desktop">
+                        <span class="fa fa-desktop fa-lg"></span>
+                    </a>
+                    <a class="button dib p-m oval-s iact"
+                       data-type="buildButton"
+                       data-project-id="{id}"
+                       data-project-name="{name}"
+                       data-key="button"
+                       title="Build for browser">
+                        <span class="fa fa-wrench fa-lg"></span>
+                    </a>
+                    <a class="button dib p-m oval-s iact"
+                       data-type="runButton"
+                       data-project-id="{id}"
+                       data-project-name="{name}"
+                       data-key="button"
+                       title="Build &amp; run">
+                        <span class="fa fa-play-circle fa-lg"></span>
+                    </a>
+                    <a class="button dib p-m oval-s iact"
+                       data-type="saveButton"
+                       data-project-id="{id}"
+                       data-project-name="{name}"
+                       data-key="button"
+                       title="Save project">
+                        <span class="fa fa-save fa-lg"></span>
+                    </a>
+                </div>
+                <h1 class="Title m0 lh0">
+                    <img class="m0" src="style/logo.png" height="48" alt="Toothrot Engine" />
+                </h1>
+            </div>
+            <div class="content-area fix l0 r0 b0">
+                <div id="content">
+                    <div data-module="projectList">
+                        <h1>Projects Overview</h1>
+                        <div class="content"></div>
+                    </div>
+                    <div data-module="editor">
+                        <div class="content">
+                            <h1 data-key="projectTitle">Editor</h1>
+                            <div class="file-controls">
+                                <div class="select-box button">
+                                    <i class="fa fa-angle-down select-box-icon"></i>
+                                    <select data-type="fileSelect">
+                                        <optgroup label="Story Files">
+                                            <option>story.trot.md</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="file-buttons">
+                                    <a class="button dib p-m oval-s iact"
+                                            data-type="deleteFileButton"
+                                            data-key="deleteButton"
+                                            title="Delete file">
+                                        <span class="fa fa-trash fa-lg"></span>
+                                    </a>
+                                    <a class="button dib p-m oval-s iact"
+                                            data-type="createFileButton"
+                                            title="Create new file">
+                                        <span class="fa fa-plus fa-lg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="editor-frame abs l0 r0 b0">
+            <div class="editor-content w100 h100"></div>
+            <div class="error-guide" data-module="errorGuide">
+                <div class="error-guide-header">
+                    <div class="error-stats" data-key="stats">
+                        <i class="error-icon fa fa-warning"></i> Error:
+                        <span data-key="offset">0</span> /
+                        <span data-key="count">0</span>
+                    </div>
+                    <div class="error-navigation" data-key="navigation">
+                        <div data-type="errorLink"
+                                data-key="previous"
+                                class="button"
+                                data-target-offset="0"
+                                title="Previous error">
+                            <i class="fa fa-chevron-left"></i>
+                        </div>
+                        <div data-type="errorLink"
+                                data-key="next"
+                                class="button"
+                                data-target-offset="0"
+                                title="Next error">
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="error-details" data-key="error">
+                    <div class="error-id">Error ID: <span data-key="id">???</span></div>
+                    <div class="error-message" data-key="message">???</div>
+                </div>
+            </div>
+        </div>
+        <script src="src/index.js"></script>
+    </body>
+</html>

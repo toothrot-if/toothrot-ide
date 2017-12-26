@@ -1,0 +1,26 @@
+{
+    "name": "toothrot-editor",
+    "bin": "toothrot-editor",
+    "productName": "toothrot",
+    "genericName": "IDE",
+    "description": "Editor and build tool for developing text-based games",
+    "productDescription": "Toothrot allows you to build text-based games (interactive fiction) that run in the browser or as standalone desktop apps for windows, mac and linux.",
+    "section": "editors",
+    "icon": {
+        "32x32": "style/icons/icon32.png",
+        "48x48": "style/icons/icon48.png",
+        "64x64": "style/icons/icon64.png",
+        "128x128": "style/icons/icon128.png",
+        "256x256": "style/icons/icon256.png",
+        "512x512": "style/icons/icon512.png",
+        "scalable": "style/icons/icon.svg"
+    },
+    "categories": [
+        "Development",
+        "IDE"
+    ],
+    "homepage": "https://toothrot.iiyo.org",
+    "lintianOverrides": [
+      "changelog-file-missing-in-native-package"
+    ]
+}
