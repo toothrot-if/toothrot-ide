@@ -6,7 +6,7 @@ var domglue = require("domglue");
 var contains = require("enjoy-core/contains");
 var privatize = require("enjoy-core/privatize");
 
-var registerLanguage = require("../utils/trotLanguage").register;
+var registerLanguage = require("toothrot-monarch").register;
 
 var FILE_TYPES = require("../projectFileTypes");
 

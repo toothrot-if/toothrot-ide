@@ -30,6 +30,7 @@
     "rimraf": "^2.5.4",
     "t3js": "^2.7.0",
     "toothrot": "^2.0.0-beta.9",
+    "toothrot-monarch": "^1.0.0",
     "transform-js": "^1.1.0-final.1512141547",
     "vrep": "^2.0.0"
   },
