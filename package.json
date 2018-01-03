@@ -13,7 +13,7 @@
     "package-debian": "electron-installer-debian --src release-builds/toothrot-ide-linux-x64/ --dest release-builds/installers/ --arch amd64 --config config/debian.json",
     "prepare-package-mac": "npm install appdmg && mkdir release-builds/installers",
     "clean-dmg": "rm release-builds/installers/Toothrot-IDE.dmg",
-    "package-mac": "appdmg config/mac.json release-builds/installers/Toothrot-IDE.dmg"
+    "package-mac": "appdmg config/dmg.json release-builds/installers/Toothrot-IDE.dmg"
   },
   "author": "J. Steinbeck <mail@steinbeck.it>",
   "license": "BSD-3-Clause",
@@ -29,7 +29,7 @@
     "monaco-loader": "^0.8.2",
     "rimraf": "^2.5.4",
     "t3js": "^2.7.0",
-    "toothrot": "^2.0.0-beta.9",
+    "toothrot": "^2.0.0-beta.15",
     "toothrot-monarch": "^1.0.0",
     "transform-js": "^1.1.0-final.1512141547",
     "vrep": "^2.0.0"
