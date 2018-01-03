@@ -25,7 +25,7 @@ global.toothrot = toothrot;
 
 function start () {
     
-    logger.info("----- Toothrot Editor is starting up...");
+    logger.info("----- Toothrot IDE is starting up...");
     
     win = new BrowserWindow({
         width: 980,

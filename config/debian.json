@@ -1,7 +1,7 @@
 {
     "name": "toothrot-ide",
     "bin": "toothrot-ide",
-    "productName": "toothrot",
+    "productName": "Toothrot IDE",
     "genericName": "IDE",
     "description": "IDE for developing text-based games",
     "productDescription": "Toothrot allows you to build text-based games (interactive fiction) that run in the browser or as standalone desktop apps for windows, mac and linux.",
