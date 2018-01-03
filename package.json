@@ -1,5 +1,5 @@
 {
-  "name": "toothrot-editor",
+  "name": "toothrot-ide",
   "productName": "Toothrot",
   "version": "2.0.0-beta",
   "description": "A build tool and editor for creating text-based games",
@@ -7,13 +7,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "update-nsi-file": "vrep scripts/installers/windows/installer-template.nsi package.json scripts/installers/windows/installer.nsi",
-    "build-mac": "electron-packager . toothrot-editor --overwrite --platform=darwin --arch=x64 --icon=style/icons/icon.icns --prune=true --out=release-builds",
-    "build-win": "electron-packager . toothrot-editor --overwrite --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Toothrot\"",
-    "build-linux": "electron-packager . toothrot-editor --overwrite --platform=linux --arch=x64 --icon=style/icons/icon512.png --prune=true --out=release-builds",
-    "package-debian": "electron-installer-debian --src release-builds/toothrot-editor-linux-x64/ --dest release-builds/installers/ --arch amd64 --config config/debian.json",
+    "build-mac": "electron-packager . toothrot-ide --overwrite --platform=darwin --arch=x64 --icon=style/icons/icon.icns --prune=true --out=release-builds",
+    "build-win": "electron-packager . toothrot-ide --overwrite --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Toothrot\"",
+    "build-linux": "electron-packager . toothrot-ide --overwrite --platform=linux --arch=x64 --icon=style/icons/icon512.png --prune=true --out=release-builds",
+    "package-debian": "electron-installer-debian --src release-builds/toothrot-ide-linux-x64/ --dest release-builds/installers/ --arch amd64 --config config/debian.json",
     "prepare-package-mac": "npm install appdmg && mkdir release-builds/installers",
-    "clean-dmg": "rm release-builds/installers/Toothrot-Editor.dmg",
-    "package-mac": "appdmg config/mac.json release-builds/installers/Toothrot-Editor.dmg"
+    "clean-dmg": "rm release-builds/installers/Toothrot-IDE.dmg",
+    "package-mac": "appdmg config/mac.json release-builds/installers/Toothrot-IDE.dmg"
   },
   "author": "J. Steinbeck <mail@steinbeck.it>",
   "license": "BSD-3-Clause",

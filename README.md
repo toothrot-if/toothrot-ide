@@ -1,7 +1,8 @@
-# Toothrot Editor
+# Toothrot IDE
 
-A desktop app for editing text-based games based on [toothrot](https://github.com/iiyo/toothrot).
-It works on windows, mac and linux systems and can build the games for browser, win, mac and linux.
+A desktop app for developing text-based games based on
+[toothrot](https://github.com/toothrot-if/toothrot/). It works on Windows, Mac and Linux
+systems and can build the games for browser, Windows, Mac and Linux.
 
 ## Features
 
@@ -16,7 +17,7 @@ It works on windows, mac and linux systems and can build the games for browser, 
 
 ### Testing the app
 
-Toothrot Editor is an [electron](http://electronjs.org/) app.
+Toothrot IDE is an [electron](http://electronjs.org/) app.
 You can test the app by running the following in the root folder of the project:
 
     electron .

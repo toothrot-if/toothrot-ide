@@ -6,9 +6,9 @@
         "Game Development",
         "Interactive Fiction"
     ],
-    "name": "toothrot-editor",
-    "productName": "Toothrot Editor",
-    "description": "Editor and build tool for creating test-based games",
-    "productDescription": "An editor that allows you to create your own text-based games (interactive fiction).",
-    "homepage": "https://toothrot.iiyo.org"
+    "name": "toothrot-ide",
+    "productName": "Toothrot IDE",
+    "description": "IDE for creating text-based games",
+    "productDescription": "An IDE that allows you to create your own text-based games (interactive fiction).",
+    "homepage": "https://toothrot.one"
 }
