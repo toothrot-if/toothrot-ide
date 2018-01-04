@@ -16,7 +16,7 @@ var LOG_FILE = path.join(APP_PATH, "log.txt");
 var app = electron.app;
 var BrowserWindow = electron.BrowserWindow;
 
-logger.transports.file.level = "info";
+logger.transports.file.level = "warn";
 logger.transports.file.format = "[{y}-{m}-{d} {h}:{i}:{s}] [{level}] {text}";
 logger.transports.console.format = "[{y}-{m}-{d} {h}:{i}:{s}] [{level}] {text}";
 logger.transports.file.file = LOG_FILE;
