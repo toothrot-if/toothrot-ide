@@ -4,16 +4,21 @@ var rimraf = require("rimraf");
 var path = require("path");
 var normalize = path.normalize;
 var patchFs = require("electron-patch-fs");
-var toothrot = require("toothrot");
+var createApp = require("toothrot").createApp;
 var readStoryFiles = require("toothrot/src/utils/readStoryFiles");
 
 var FILE_TYPES = require("../projectFileTypes");
 
-var parse = toothrot.parse;
-
 function create (app) {
     
     var logger = app.getService("logging");
+    var toothrot = createApp();
+    
+    toothrot.subscribe("error", logger.error.bind(logger));
+    toothrot.subscribe("app/error", logger.error.bind(logger));
+    toothrot.subscribe("app/ready", logger.log.bind(logger, "Toothrot app started."));
+    
+    toothrot.init();
     
     function createProject(name, then) {
         
@@ -21,7 +26,7 @@ function create (app) {
         
         logger.log("Creating project '" + name + "'...");
         
-        toothrot.init(folder, function () {
+        toothrot.channel("initializer/init").call(folder, function () {
             
             initProjectName(name);
             
@@ -120,6 +125,7 @@ function create (app) {
         
         var folder = getProjectFolder(name);
         var outputDir = getProjectBuildFolder(name);
+        var desktop = platform === "desktop";
         
         logger.log("Building project '" + name + "' for platform '" + platform + "'...");
         
@@ -127,7 +133,7 @@ function create (app) {
         
         patchFs.patch();
         
-        toothrot.build(folder, outputDir, platform === "desktop", function (error) {
+        toothrot.channel("builder/build").call(folder, outputDir, desktop, function (error) {
             
             var message;
             var info = getProjectInfo(name);
@@ -207,11 +213,14 @@ function create (app) {
     }
     
     function parseStoryFile(name, then) {
-        return toothrot.parse(getMainStoryFile(name), then);
+        return toothrot.channel("parser/parse").call(getMainStoryFile(name), then);
     }
     
     function parseStory(projectId, then) {
-        parse(readStoryFiles(getFolder(projectId, FILE_TYPES.STORY.ID)), then);
+        toothrot.channel("parser/parse").call(
+            readStoryFiles(getFolder(projectId, FILE_TYPES.STORY.ID)),
+            then
+        );
     }
     
     function fileExists(projectId, fileType, fileName) {
